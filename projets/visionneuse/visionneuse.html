@@ -1,0 +1,67 @@
+<!-- Dans ce code comment puis je faire pour que lorsque je passe ma souris sur une image elle s'affiche à la place de la grande image comme dans la visionneuse d'image amazon -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jardin fleuris</h1>
+        <ul>
+            <li><a href="#">Nos bouquets</a></li>
+            <li><a href="#">Composez votre bouquet</a></li>
+            <li><a href="#">Mon compte</a></li>
+        </ul>
+        <h2>Une variété de fleurs</h2>
+    </header>
+    <main>
+        <div class="visionneuse">
+            <img class="imageVisionneuse" src="rose.webp" alt="">
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi at, distinctio ut quas vero omnis iure
+                    et expedita officiis explicabo delectus eum saepe eos amet aliquam fugiat dolorem eaque aperiam.
+                    Possimus corrupti non at ullam. Cumque dolorem accusantium alias corporis adipisci cupiditate ab
+                    doloremque ipsum minima et, hic iste quidem nobis, aperiam velit commodi dolore suscipit dolores,
+                    eum voluptates culpa.</p>
+            </div>
+        </div>
+        <div class="schroll">
+            <img class="miniature" src="rose.webp" alt="">
+            <img class="miniature" src="lotus.jpg" alt="">
+            <img class="miniature" src="violet.jpg" alt="">
+            <img class="miniature" src="Pink.jpg" alt="">
+        </div>
+        <!-- on click attribut la valeur de la fonction  -->
+        <button onclick="alert('coucou')">Actualiser</button>
+
+    </main>
+    <script>
+
+        let miniatures = document.querySelectorAll('.miniature');
+        let imageVisionneuse = document.querySelector('.imageVisionneuse');
+
+        // miniatures.forEach(miniature => {
+        //     miniature.addEventListener('mouseover', () => {
+        //         imageVisionneuse.src = miniature.src;
+
+        //     });
+        // });
+        // document.querySelector('img').src = "rose.webp";
+
+        for (let picture of miniatures) {
+            picture.addEventListener('mouseover', function () {
+                imageVisionneuse.src = picture.src;
+            });
+        }
+
+        
+        
+    </script>
+</body>
+</html>

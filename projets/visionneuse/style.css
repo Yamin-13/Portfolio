@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+
+    background-color: #7fbf7fcc;
+    text-align: center;
+    position: relative;
+    height: 100px;
+
+}
+
+h1 {
+    font-size: 40px;
+    color: #083c08;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(45, 42, 42);
+}
+
+ul {
+    margin: px;
+}
+
+li {
+    display: inline;
+    margin: 20px;
+
+
+}
+
+li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #083c08;
+    transition: text-shadow 0.7s;
+
+}
+
+li a:hover {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 30px rgba(250, 238, 5, 0.968);
+}
+
+.imageVisionneuse {
+    width: 830px;
+    height: 500px;
+}
+
+.visionneuse {
+    /* width: 100px; */
+    padding-top: 170px;
+    margin-left: 100px;
+    display: flex;
+}
+
+.description {
+    height: 300px;
+    width: 600px;
+    margin-left: 20px;
+
+}
+
+p {
+    text-align: justify;
+    
+}
+
+.miniature {
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 190px;
+    height: 130px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1.5);
+    transition: box-shadow 0.3s;
+
+}
+
+.miniature:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+
+}
+
+.schroll {
+    margin-left: 90px;
+
+
+}

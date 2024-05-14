@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Flower Shooter</h1>
+    <p>Score : <span></span> </p>
+    <div class="container">
+        <div class="frameGame">
+            <div>
+                <img class="redBall" src="./aster-mexicain.png" alt="">
+            </div>
+            <div>
+                <img class="blueBall" src="./laurier-rose.png" alt="">
+            </div>
+            <div>
+                <img class="dangerBall" src="./fleur-aux-petales-triangulaires.png" alt="" id="dangerBall">
+            </div>
+        </div>
+        <img class="tournesolGun" src="./tournesolGun.jpg" alt="">
+    </div>
+    <script>
+        let incrementation = 0;
+        document.querySelector("span").innerText = 0;
+        document.querySelector('.redBall').addEventListener("click", function () {
+            console.log('click');
+            console.log(incrementation);
+            document.querySelector("span").innerText = ++incrementation;
+            console.log(incrementation);
+        });
+        document.querySelector('.blueBall').addEventListener("click", function () {
+
+            document.querySelector("span").innerText = --incrementation;
+        });
+        document.getElementById('dangerBall').addEventListener('click', function () {
+            alert('Vous avez perdu !');
+        })
+    </script>
+</body>
+
+</html>

@@ -31,7 +31,7 @@ ScrollReveal({
 ScrollReveal().reveal('.homeContent, .heading', {
     origin: 'top'
 });
-ScrollReveal().reveal('.homeImg, .servicesContainer, .portfolioBox, .imgContact', {
+ScrollReveal().reveal('.homeImg, .servicesContainer, .portfolioBox, .contact form', {
     origin: 'bottom'
 });
 ScrollReveal().reveal('.homeContent h1, .aboutImg', {

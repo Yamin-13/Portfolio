@@ -36,7 +36,7 @@
       <h3>Salut, C'est moi</h3>
       <H1>Aouane Yamin</H1>
       <h3>Et Je suis <span> En Formation de Développeur Web</span></h3>
-      <p>Débutant dans le développement web, je suis avide d'apprendre et de relever des défis.</p>
+      <p>Junior dans le développement web, je suis avide d'apprendre et de relever des défis.</p>
       <div class="socialMedia">
         <a href="#"><i class='bx bxl-facebook'></i></a>
         <a href="#"><i class='bx bxl-twitter'></i></a>
@@ -162,14 +162,21 @@
 
   <!--  section contact -->
   <section class="contact" id="contact">
-    <div class="contactFlower">
-      <h2 class="heading">Contactez <span>Moi!</span></h2>
-      <div class="flex-container">
-        <a href="mailto:yamin22@live.fr" id="btnContact" class="btn">Contactez-moi</a>
-        <img class="imgContact" src="./asset/img/aboutFlower.png" alt="">
-      </div>
-    </div>
-  </section>
+    <h2 class="heading">Contactez  <span>Moi!</span></h2>
+
+    <form action="./ctrl/contact.php" method="post">
+        <div class="inputBox">
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="text" name="prenom" placeholder="Prénom" required>
+        </div>
+        <div class="inputBox">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="societe" placeholder="Société (Facultatif)">
+        </div>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Votre Message" required></textarea>
+        <input type="submit" value="Envoyer" class="btn">
+    </form>
+</section>
 
   <!-- footer  -->
   <footer class="footer">

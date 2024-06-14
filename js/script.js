@@ -49,13 +49,17 @@ ScrollReveal().reveal('.homeContent p, .aboutContent, #btnContact', {
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
+
+    const responseMessage = document.getElementById('response-message');
+    responseMessage.innerHTML = ''; 
+
     emailjs.sendForm('service_9tzqplj', 'template_6l7dime', this)
         .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
-            alert('Message envoyé avec succès !');
+            responseMessage.innerHTML = '<p style="color: white;">Message envoyé avec succès !</p>';
             document.getElementById('contact-form').reset();
         }, function (error) {
             console.error('FAILED...', error);
-            alert('L\'envoi du message a échoué.');
+            responseMessage.innerHTML = '<p style="color: red;">L\'envoi du message a échoué. Veuillez réessayer.</p>';
         });
 });

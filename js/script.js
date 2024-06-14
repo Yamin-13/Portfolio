@@ -40,3 +40,26 @@ ScrollReveal().reveal('.homeContent h1, .aboutImg', {
 ScrollReveal().reveal('.homeContent p, .aboutContent, #btnContact', {
     origin: 'right'
 });
+
+/*==================== formulaire de contact ====================*/
+
+(function() {
+    emailjs.init("mQUHLCfmyq6SmqQuq");
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    
+    const formData = new FormData(event.target);
+    console.log('Form Data:', Object.fromEntries(formData.entries()));
+
+    emailjs.sendForm('service_9tzqplj', 'template_6l7dime', this)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Message envoyé avec succès !');
+        }, function(error) {
+            console.error('FAILED...', error);
+            alert('L\'envoi du message a échoué.');
+        });
+});

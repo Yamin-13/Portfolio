@@ -13,7 +13,7 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => { // le code est exécuter lorsque l'utilisateur fait défiler la page
-   
+
     /*==================== retire le menu Hamburger au clic sur un lien ====================*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
@@ -43,22 +43,18 @@ ScrollReveal().reveal('.homeContent p, .aboutContent, #btnContact', {
 
 /*==================== formulaire de contact ====================*/
 
-(function() {
+(function () {
     emailjs.init("mQUHLCfmyq6SmqQuq");
 })();
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
-
-    
-    const formData = new FormData(event.target);
-    console.log('Form Data:', Object.fromEntries(formData.entries()));
-
     emailjs.sendForm('service_9tzqplj', 'template_6l7dime', this)
-        .then(function(response) {
+        .then(function (response) {
             console.log('SUCCESS!', response.status, response.text);
             alert('Message envoyé avec succès !');
-        }, function(error) {
+            document.getElementById('contact-form').reset();
+        }, function (error) {
             console.error('FAILED...', error);
             alert('L\'envoi du message a échoué.');
         });

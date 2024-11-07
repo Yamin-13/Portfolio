@@ -270,6 +270,7 @@ span {
 
 .portfolioBox:hover img {
     transform: scale(1.1);  /* cela augmente la taille de l'image au passage de la souris */
+    opacity: 0.6; /* Rend l'image plus foncée */
 }
 
 .portfolioBox .portfolioLayer {
@@ -278,7 +279,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,7 +296,7 @@ span {
 
 .portfolioLayer h4 {
     font-size: 3rem;
-    color: var(--bg-color);
+    /* color: var(--bg-color); */
     font-weight: 800;
 
     border-radius: 10px;
@@ -304,7 +305,7 @@ span {
 .portfolioLayer p {
     font-size: 1.8rem;
     margin: 0.3 0 1rem;
-    color: var(--bg-color);
+    /* color: var(--bg-color); */
     font-weight: 700;
 
 }

@@ -1,0 +1,58 @@
+.competences {
+    padding: 10rem 9% 2rem;
+    background-color: var(--second-bg-color);
+}
+
+.heading-competences{
+    text-align: center;
+    font-size: 4.5rem;
+    padding: 20px;
+}
+
+.competencesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.competenceBox {
+    flex: 1 1 22rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.competenceBox:hover {
+    border-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+.competenceBox i {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.competenceBox h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.competenceBox p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.footer-competences{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+}

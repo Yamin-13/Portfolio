@@ -334,8 +334,6 @@ span {
     margin-bottom: 3rem;
 }
 
-
-
 #btnContact {
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -439,9 +437,6 @@ span {
     color: var(--second-bg-color);
 
 }
-
-
-
 
 @media (max-width: 1200px) {
     html {
